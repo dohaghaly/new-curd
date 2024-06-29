@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">   
+</head>
+<body style="background-color: darkgray">
+
+    <div class="w-75 mx-auto py-4">
+        <h3 class="fw-bolder py-3">Project Management System</h3>
+        <label class="py-1" for="ProductNameInput">Product Name:</label>
+        <input class="form-control" type="text" id="ProductNameInput" >
+
+        <label class="py-1" for="productPriceInput">Product Price:</label>
+        <input class="form-control" type="number" id="productPriceInput" >
+
+        <label class="py-1" for="productCategoryInput">Product Category:</label>
+        <input class="form-control" type="text" id="productCategoryInput" >
+
+        <label class="py-1" for="productDescInput">Product Description:</label>
+        <textarea class="form-control" id="productDescInput"></textarea>
+        
+        <input type="hidden" id="productIndexInput">
+        
+
+        <button id="productButton" onclick="Addproduct();" class="btn my-2 btn-outline-danger">Add Product</button>
+    </div> 
+
+    <input onkeyup="searchproduct(this.value)" placeholder="Search" id="searchinput" class="form-control w-50 m-auto" type="text">
+    <div class="w-75 mx-auto py-4">
+        <table class="table m-4 text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="TableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/main.js"></script>    
+</body>
+</html>
